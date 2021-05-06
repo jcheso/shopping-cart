@@ -50,12 +50,11 @@ nav a:hover {
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   background-color: #e7e6e1;
   height: 84vh;
   width: 100vw;
   overflow-y: scroll;
-
 }
 
 .item-card {
@@ -102,13 +101,11 @@ nav a:hover {
   cursor: pointer;
   width: 100px;
   padding: 5px;
-
 }
 
 .btn:hover {
   opacity: 1;
 }
-
 
 .cart-input {
   border-radius: 5px;
