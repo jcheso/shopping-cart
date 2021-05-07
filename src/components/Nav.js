@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/styles.css";
 import { Link } from "react-router-dom";
+import shoppingCart from "./assets/outline_shopping_cart_white_24dp.png";
 
 const Nav = ({ state: items, setState: setItems }) => {
   let cartTotal = 0;
@@ -9,7 +10,6 @@ const Nav = ({ state: items, setState: setItems }) => {
       cartTotal += items[index].inCart * items[index].price;
     }
   };
-
   sumCartTotal();
 
   return (
@@ -24,9 +24,19 @@ const Nav = ({ state: items, setState: setItems }) => {
         <Link className="navStyle" to="/shop">
           <li>Shop</li>
         </Link>
-        <Link className="navStyle" to="/cart">
-          <li>Cart</li>
-          <div>${cartTotal}</div>
+        <Link className="navStyleCart" to="/cart">
+          <div className="navCart">
+            <div className="cartText">${cartTotal}</div>
+          </div>
+
+          <div>
+            {" "}
+            <img
+              className="cartImg"
+              src={shoppingCart}
+              alt="Shopping Cart"
+            ></img>
+          </div>
         </Link>
       </ul>
     </nav>

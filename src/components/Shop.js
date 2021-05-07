@@ -46,7 +46,7 @@ const Shop = ( {state: items, setState: setItems}) => {
           <div className="item-row">
             <form onSubmit={handleSubmit}>
               <input
-                id={index}
+                id={item.index}
                 placeholder="0"
                 className="cart-input"
                 type="number"

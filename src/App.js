@@ -22,6 +22,7 @@ const App = () => {
       price: 35.5,
       img: brazil,
       inCart: 0,
+      index: 0,
     },
     {
       name: "Colombia",
@@ -30,6 +31,7 @@ const App = () => {
       price: 35.5,
       img: colombia,
       inCart: 0,
+      index: 1,
     },
     {
       name: "Peru",
@@ -38,6 +40,7 @@ const App = () => {
       price: 36.5,
       img: peru,
       inCart: 0,
+      index: 2,
     },
     {
       name: "Costa Rica",
@@ -46,6 +49,7 @@ const App = () => {
       price: 35.5,
       img: costaRica,
       inCart: 0,
+      index: 3,
     },
     {
       name: "Ethiopia",
@@ -54,6 +58,7 @@ const App = () => {
       price: 35.5,
       img: ethiopia,
       inCart: 0,
+      index: 4,
     },
     {
       name: "Guatemala",
@@ -62,6 +67,7 @@ const App = () => {
       price: 35.5,
       img: guatemala,
       inCart: 0,
+      index: 5,
     },
     {
       name: "Papa New Guinea",
@@ -70,16 +76,18 @@ const App = () => {
       price: 35.5,
       img: png,
       inCart: 0,
+      index: 6,
     },
   ]);
 
   return (
     <Router>
       <div className="App">
-        <Nav state={items} setState={setItems}/>
-        <div className="container">
+        <Nav state={items} setState={setItems} />
+        <div className="">
           <Switch>
             <Route exact path="/about" component={About} />
+            <Route exact path="/" component={About} />
             <Route exact path="/shop">
               <Shop state={items} setState={setItems} />
             </Route>
